@@ -21,9 +21,9 @@
 
     if (Env == "online") {
         define('DB_HOST', 'localhost');
-        define('DB_TABLE', 'verajnse_creche');
-        define('DB_USER', 'verajnse_creche');
-        define('DB_PASSWORD', ';XW8Ll#wss&j');
+        define('DB_TABLE', 'verajnse_career_guidance');
+        define('DB_USER', 'verajnse_career_guidance');
+        define('DB_PASSWORD', 'B(kK!RFo.D%n');
     }else{
         define('DB_HOST', 'localhost');
         define('DB_TABLE', 'app_fpe_career_guidance');

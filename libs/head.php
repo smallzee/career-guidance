@@ -115,6 +115,13 @@
                     </a>
                 </li>
 
+                <li >
+                    <a href="<?= base_url('requirement.php') ?>">
+                        <i class="fa fa-book text-primary "></i>
+                        <span>Department Requirements</span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="<?= base_url('department.php') ?>">
                         <i class="fa fa-book text-primary "></i>
