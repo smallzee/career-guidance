@@ -23,8 +23,6 @@ if (isset($_POST['login'])){
 
     if ($sql->rowCount() == 0){
         set_flash("Invalid login details entered","danger");
-    }elseif ($rs['role'] != 1){
-        set_flash("Access denied","danger");
     }else{
         $rs['password'] = 'xxx';
         $_SESSION['loggedin'] = true;
@@ -78,7 +76,7 @@ if (isset($_POST['login'])){
         <a href="<?= base_url() ?>"><img src="<?= image_url('logoOriginal2.png') ?>" alt=""></a>
     </div>
     <!-- /.login-logo -->
-    <div class="box box-danger" style="box-shadow: 2px 2px 2px 0 rgba(0,0,0, 0.1)">
+    <div class="box box-primary" style="box-shadow: 2px 2px 2px 0 rgba(0,0,0, 0.1)">
         <div class="box-header  with-border">
             <h5 class="box-title">Account Login</h5>
         </div>
@@ -97,7 +95,7 @@ if (isset($_POST['login'])){
                 <div class="row">
                     <!-- /.col -->
                     <div class="col-xs-4">
-                        <button type="submit" name="login" class="btn btn-danger btn-block">Login</button>
+                        <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
                     </div>
                     <!-- /.col -->
                 </div>

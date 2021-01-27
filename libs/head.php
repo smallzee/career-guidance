@@ -44,7 +44,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="icon" href="<?= image_url('logo.png') ?>">
 </head>
-<body class="hold-transition skin-blue sidebar-mini" style="font-size: 15px;">
+<body class="hold-transition skin-blue sidebar-mini" >
 <div class="wrapper">
     <header class="main-header">
         <!-- Logo -->
@@ -70,7 +70,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?= image_url('icon.jpeg') ?>" class="user-image" alt="User Image">
-                            <span class="hidden-xs"><?= ucwords(admin_details('fname')) ?> (<?= ucwords(role(admin_details('role'))) ?>)</span>
+                            <span class="hidden-xs"><?= ucwords(admin_details('fname')) ?> (Admin)</span>
                         </a>
                     </li>
                 </ul>
@@ -109,39 +109,19 @@
                 </li>
 
                 <li >
-                    <a href="<?= base_url('class.php') ?>">
-                        <i class="fa fa-users text-primary "></i>
-                        <span>Student Classes</span>
+                    <a href="<?= base_url('guidance.php') ?>">
+                        <i class="fa fa-book text-primary "></i>
+                        <span>Career Guidance</span>
                     </a>
                 </li>
 
-                <li >
-                    <a href="<?= base_url('payment.php') ?>">
-                        <i class="fa fa-credit-card text-primary "></i>
-                        <span>Payment History</span>
+                <li>
+                    <a href="<?= base_url('department.php') ?>">
+                        <i class="fa fa-book text-primary "></i>
+                        <span>All Schools &amp; Departments</span>
                     </a>
                 </li>
 
-                <li >
-                    <a href="<?= base_url('parent.php') ?>">
-                        <i class="fa fa-users text-primary "></i>
-                        <span>Parent's Information</span>
-                    </a>
-                </li>
-
-                <li >
-                    <a href="<?= base_url('student.php') ?>">
-                        <i class="fa fa-users text-primary "></i>
-                        <span>Student's Information</span>
-                    </a>
-                </li>
-
-                <li >
-                    <a href="<?= base_url('class-teacher.php') ?>">
-                        <i class="fa fa-users text-primary "></i>
-                        <span>Student Class Teachers</span>
-                    </a>
-                </li>
 
                 <li>
                     <a href="<?= base_url('logout.php') ?>">
@@ -163,7 +143,7 @@
                 <?= $page_title ?>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url('admin/dashboard') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a href="<?= base_url('dashboard.php') ?>"><i class="fa fa-home"></i> Dashboard</a></li>
                 <li class="active"><?= $page_title ?></li>
             </ol>
         </section>
