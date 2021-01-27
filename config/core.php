@@ -26,7 +26,7 @@
         define('DB_PASSWORD', ';XW8Ll#wss&j');
     }else{
         define('DB_HOST', 'localhost');
-        define('DB_TABLE', 'app_fpe_creche');
+        define('DB_TABLE', 'app_fpe_career_guidance');
         define('DB_USER', 'root');
         define('DB_PASSWORD', '');
     }
