@@ -10,14 +10,14 @@
     require_once 'func.php';
     define('Env', 'onlin');
 
-    define("DB_PREFIX", "ch_");
+    define("DB_PREFIX", "cg_");
 
     define("LIB_DIR","http://projects.io/app/creche/");
     define("HOME_DIR","http://projects.io/app/career-guidance/");
     define("HTML_TEMPLATE",LIB_DIR.'templates/');
     define("USER_SESSION_HOLDER", "admin");
     define("WEB_TITLE","Career Guidance");
-    define("WEB_SUB_TITLE","CH");
+    define("WEB_SUB_TITLE","CG");
 
     if (Env == "online") {
         define('DB_HOST', 'localhost');
