@@ -35,6 +35,7 @@ require_once 'libs/head.php';
                                 <th>SN</th>
                                 <th>School Name</th>
                                 <th>Department Name</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -42,6 +43,7 @@ require_once 'libs/head.php';
                                 <th>SN</th>
                                 <th>School Name</th>
                                 <th>Department Name</th>
+                                <th>Action</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -61,13 +63,15 @@ require_once 'libs/head.php';
                                                     while ($rs2 = $sql2->fetch(PDO::FETCH_ASSOC)){
                                                         ?>
                                                     <tr>
-                                                        <td style="padding: 5px"><?= $i++.'. '.ucwords($rs2['name']) ?></td>
+                                                        <td style="padding: 5px"><?= $i++.'. '.ucwords($rs2['name']) ?>
+                                                            <a href="">Update</a> </td>
                                                     </tr>
                                                         <?php
                                                     }
                                                 ?>
                                             </table>
                                         </td>
+                                        <td><a href="" class="btn btn-primary btn-sm">Update</a></td>
                                     </tr>
                                     <?php
                                 }
