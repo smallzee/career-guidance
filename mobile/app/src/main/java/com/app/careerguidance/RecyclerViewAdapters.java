@@ -1,6 +1,9 @@
 package com.app.careerguidance;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.makeramen.roundedimageview.RoundedTransformationBuilder;
@@ -57,8 +61,8 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
             holder.click.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
+                    String view_id = ((Lists) RecyclerViewAdapters.this.mData.get(position)).getId();
+                    
                 }
             });
         }

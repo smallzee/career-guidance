@@ -12,7 +12,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.CareerGuidance">
-        <activity android:name=".View"></activity>
+        <activity android:name=".Navigate" android:parentActivityName=".Guidance"></activity>
         <activity
             android:name=".Guidance"
             android:parentActivityName=".MainActivity" />
