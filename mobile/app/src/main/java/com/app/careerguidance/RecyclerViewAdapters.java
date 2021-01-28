@@ -17,12 +17,12 @@ import com.squareup.picasso.Transformation;
 
 import java.util.List;
 
-public class RecyclerViewAdaptersDevelopers extends RecyclerView.Adapter<RecyclerViewAdaptersDevelopers.MyViewHolder>{
+public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapters.MyViewHolder>{
 
     Context mContext;
-    private List<List_students> mData;
+    private List<Lists> mData;
 
-    public RecyclerViewAdaptersDevelopers(Context mContext, List<List_students> mData) {
+    public RecyclerViewAdapters(Context mContext, List<Lists> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -32,7 +32,7 @@ public class RecyclerViewAdaptersDevelopers extends RecyclerView.Adapter<Recycle
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view;
-        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lists_students, parent,false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lists, parent,false);
         MyViewHolder viewHolder = new MyViewHolder(view);
 
         return viewHolder;
@@ -40,9 +40,11 @@ public class RecyclerViewAdaptersDevelopers extends RecyclerView.Adapter<Recycle
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        holder.st_matric.setText(((List_students) mData.get(position)).getMatric());
-        holder.st_name.setText(((List_students) mData.get(position)).getName());
-        holder.st_level.setText(((List_students) mData.get(position)).getLevel());
+        holder.st_matric.setText(((Lists) mData.get(position)).getMatric());
+        holder.st_name.setText(((Lists) mData.get(position)).getName());
+        holder.st_level.setText(((Lists) mData.get(position)).getLevel());
+
+        String is_click = ((Lists) mData.get(position)).getIs_click();
 
         Transformation transformation = new RoundedTransformationBuilder()
                 .cornerRadiusDp(50)
@@ -50,6 +52,15 @@ public class RecyclerViewAdaptersDevelopers extends RecyclerView.Adapter<Recycle
                 .build();
 
         Picasso.get().load(mData.get(position).getImage()).transform(transformation).into(holder.st_image);
+
+        if (is_click.equals("true")){
+            holder.click.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+        }
 
 
     }
@@ -59,12 +70,13 @@ public class RecyclerViewAdaptersDevelopers extends RecyclerView.Adapter<Recycle
         return mData.size();
     }
 
-    public RecyclerViewAdaptersDevelopers (List<List_students> mData){
+    public RecyclerViewAdapters(List<Lists> mData){
         this.mData = mData;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
+        private LinearLayout click;
         private TextView st_level;
         private ImageView st_image;
         private TextView st_matric;
@@ -78,6 +90,7 @@ public class RecyclerViewAdaptersDevelopers extends RecyclerView.Adapter<Recycle
             st_name = (TextView) itemView.findViewById(R.id.st_name);
             st_level = (TextView) itemView.findViewById(R.id.st_level);
             st_image = (ImageView) itemView.findViewById(R.id.st_image);
+            click = (LinearLayout) itemView.findViewById(R.id.click);
 
         }
     }

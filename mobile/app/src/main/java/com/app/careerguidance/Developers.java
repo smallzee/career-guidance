@@ -14,9 +14,9 @@ import java.util.List;
 
 public class Developers extends AppCompatActivity {
 
-    private List<List_students> mData = new ArrayList<>();
+    private List<Lists> mData = new ArrayList<>();
     private RecyclerView recyclerView;
-    private RecyclerViewAdaptersDevelopers recyclerViewAdaptersDevelopers;
+    private RecyclerViewAdapters recyclerViewAdaptersDevelopers;
 
 
     @Override
@@ -26,7 +26,7 @@ public class Developers extends AppCompatActivity {
         this.setTitle("About Developers");
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        recyclerViewAdaptersDevelopers = new RecyclerViewAdaptersDevelopers(mData);
+        recyclerViewAdaptersDevelopers = new RecyclerViewAdapters(mData);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerViewAdaptersDevelopers);
@@ -47,7 +47,7 @@ public class Developers extends AppCompatActivity {
                 matric = object.getJSONObject(Integer.toString(ii)).getString("matric").toUpperCase();
                 name = object.getJSONObject(Integer.toString(ii)).getString("name");
                 level = object.getJSONObject(Integer.toString(ii)).getString("level");
-                mData.add(new List_students(matric,name,level,Core.IMG_URL+matric+".jpg","0"));
+                mData.add(new Lists(matric,name,level,Core.IMG_URL+matric+".jpg","0","false"));
             }
 
         }catch (JSONException e){

@@ -1,19 +1,29 @@
 package com.app.careerguidance;
 
-public class List_students {
+public class Lists {
 
     private String level;
     private String id;
     private String image;
     private String matric;
     private String name;
+    private String is_click;
 
-    public List_students(String matric, String name, String level, String image, String id) {
+    public Lists(String matric, String name, String level, String image, String id, String is_click) {
         this.matric = matric;
         this.name = name;
         this.level = level;
         this.image = image;
         this.id = id;
+        this.is_click = is_click;
+    }
+
+    public String getIs_click() {
+        return is_click;
+    }
+
+    public void setIs_click(String is_click) {
+        this.is_click = is_click;
     }
 
     public String getLevel() {
