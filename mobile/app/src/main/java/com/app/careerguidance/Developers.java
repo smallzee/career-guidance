@@ -14,9 +14,9 @@ import java.util.List;
 
 public class Developers extends AppCompatActivity {
 
-    private List<Lists> mData = new ArrayList<>();
-    private RecyclerView recyclerView;
-    private RecyclerViewAdapters recyclerViewAdaptersDevelopers;
+    public List<Lists> mData = new ArrayList<>();
+    public RecyclerView recyclerView;
+    public RecyclerViewAdapters recyclerViewAdapters;
 
 
     @Override
@@ -26,10 +26,10 @@ public class Developers extends AppCompatActivity {
         this.setTitle("About Developers");
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        recyclerViewAdaptersDevelopers = new RecyclerViewAdapters(mData);
+        recyclerViewAdapters = new RecyclerViewAdapters(mData);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(recyclerViewAdaptersDevelopers);
+        recyclerView.setAdapter(recyclerViewAdapters);
 
         String JSON_FILE = "{'error' : '1', " +
                 "'0' : {'matric' : 'cs20180100560', 'name' : 'Aremu Comfort Oluwayemisi', 'level' : 'ND 2 FT'}, " +
@@ -47,7 +47,8 @@ public class Developers extends AppCompatActivity {
                 matric = object.getJSONObject(Integer.toString(ii)).getString("matric").toUpperCase();
                 name = object.getJSONObject(Integer.toString(ii)).getString("name");
                 level = object.getJSONObject(Integer.toString(ii)).getString("level");
-                mData.add(new Lists(matric,name,level,Core.IMG_URL+matric+".jpg","0","false"));
+
+                mData.add(new Lists(matric,name +" \n \n"+level,"",Core.IMG_URL+matric+".jpg","0","false"));
             }
 
         }catch (JSONException e){

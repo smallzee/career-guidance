@@ -46,8 +46,8 @@ public class Lists {
         return this.name;
     }
 
-    public void setLevel(String dept) {
-        this.level = dept;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public void setId(String id) {

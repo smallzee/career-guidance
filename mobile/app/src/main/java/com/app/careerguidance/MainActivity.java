@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
                 show_dialog();
 
-                StringRequest request = new StringRequest(Request.Method.POST, Core.SITE_URL, new Response.Listener<String>() {
+                StringRequest request = new StringRequest(Request.Method.POST, Core.API_URL, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         hide_dialog();

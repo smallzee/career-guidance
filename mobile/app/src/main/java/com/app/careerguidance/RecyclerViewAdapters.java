@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,8 +42,7 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.st_matric.setText(((Lists) mData.get(position)).getMatric());
-        holder.st_name.setText(((Lists) mData.get(position)).getName());
-        holder.st_level.setText(((Lists) mData.get(position)).getLevel());
+        holder.st_name.setText(((Lists) mData.get(position)).getName() +" "+ ((Lists) mData.get(position)).getLevel());
 
         String is_click = ((Lists) mData.get(position)).getIs_click();
 
@@ -58,10 +58,10 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
                 @Override
                 public void onClick(View v) {
 
+
                 }
             });
         }
-
 
     }
 
@@ -77,7 +77,6 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         private LinearLayout click;
-        private TextView st_level;
         private ImageView st_image;
         private TextView st_matric;
         private TextView st_name;
@@ -88,7 +87,6 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
 
             st_matric = (TextView) itemView.findViewById(R.id.st_matric);
             st_name = (TextView) itemView.findViewById(R.id.st_name);
-            st_level = (TextView) itemView.findViewById(R.id.st_level);
             st_image = (ImageView) itemView.findViewById(R.id.st_image);
             click = (LinearLayout) itemView.findViewById(R.id.click);
 
