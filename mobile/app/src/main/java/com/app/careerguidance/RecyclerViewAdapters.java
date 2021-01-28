@@ -2,18 +2,13 @@ package com.app.careerguidance;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.makeramen.roundedimageview.RoundedTransformationBuilder;
@@ -36,7 +31,7 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view;
+        android.view.View view;
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lists, parent,false);
         MyViewHolder viewHolder = new MyViewHolder(view);
 
@@ -58,11 +53,15 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
         Picasso.get().load(mData.get(position).getImage()).transform(transformation).into(holder.st_image);
 
         if (is_click.equals("true")){
-            holder.click.setOnClickListener(new View.OnClickListener() {
+            holder.click.setOnClickListener(new android.view.View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(android.view.View v) {
                     String view_id = ((Lists) RecyclerViewAdapters.this.mData.get(position)).getId();
-                    
+
+                    Intent intent = new Intent(v.getContext(), View.class);
+                    intent.putExtra("view_id", view_id);
+                    v.getContext().startActivity(intent);
+
                 }
             });
         }
@@ -85,7 +84,7 @@ public class RecyclerViewAdapters extends RecyclerView.Adapter<RecyclerViewAdapt
         private TextView st_matric;
         private TextView st_name;
 
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull android.view.View itemView) {
 
             super(itemView);
 
