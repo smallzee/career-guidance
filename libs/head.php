@@ -5,6 +5,13 @@
     }
     $name = admin_details('fname');
     $sn =1;
+
+    $subject_data = array();
+
+    $subject_sql = $db->query("SELECT * FROM ".DB_PREFIX."subject ORDER BY name");
+    while ($sub = $subject_sql->fetch(PDO::FETCH_ASSOC)){
+        $subject_data[] = $sub;
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -109,16 +116,23 @@
                 </li>
 
                 <li >
-                    <a href="<?= base_url('guidance.php') ?>">
+                    <a href="<?= base_url('course.php') ?>">
                         <i class="fa fa-book text-primary "></i>
-                        <span>Career Guidance</span>
+                        <span>Course</span>
                     </a>
                 </li>
 
                 <li >
-                    <a href="<?= base_url('requirement.php') ?>">
+                    <a href="<?= base_url('subject.php') ?>">
                         <i class="fa fa-book text-primary "></i>
-                        <span>Department Requirements</span>
+                        <span>Subject</span>
+                    </a>
+                </li>
+
+                <li >
+                    <a href="<?= base_url('guidance.php') ?>">
+                        <i class="fa fa-book text-primary "></i>
+                        <span>Career Guidance</span>
                     </a>
                 </li>
 

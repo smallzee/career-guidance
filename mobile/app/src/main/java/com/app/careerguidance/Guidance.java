@@ -34,6 +34,8 @@ public class Guidance extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(recyclerViewAdapters);
 
+        this.setTitle("List FPE Schools Guidance");
+
         sharedPreferences = getSharedPreferences("SCHOOL_DATA",MODE_PRIVATE);
         response = sharedPreferences.getString("school_data", null);
 

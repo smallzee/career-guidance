@@ -37,7 +37,7 @@ require_once 'libs/head.php';
 
         <div class="col-lg-6 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-purple-gradient">
+            <div class="small-box bg-blue-gradient">
                 <div class="inner">
                     <h3>
                         <?php
@@ -58,7 +58,7 @@ require_once 'libs/head.php';
 
         <div class="col-lg-12 col-xs-6">
             <!-- small box -->
-            <div class="small-box bg-yellow-gradient">
+            <div class="small-box bg-blue-gradient">
                 <div class="inner">
                     <h3>
                         <?php

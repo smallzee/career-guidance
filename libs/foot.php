@@ -44,20 +44,57 @@
 <!-- Page specific script -->
 
 <script type="text/javascript">
+
     $(function (e) {
-       $("#example1").dataTable();
+        $("#example1").dataTable();
 
-       $("#occupation").change(function () {
-           if ($(this).val() == 'fpe staff'){
-               $(".school-fee-deduction").removeClass('hide');
-               return;
-           }
+        $('.select2').select2();
 
-           $(".school-fee-deduction").addClass('hide');
-       })
+        $("#occupation").change(function () {
+            if ($(this).val() == 'fpe staff'){
+                $(".school-fee-deduction").removeClass('hide');
+                return;
+            }
+
+            $(".school-fee-deduction").addClass('hide');
+        })
 
 
     });
+
+
+   var subject = JSON.parse('<?= json_encode($subject_data) ?>');
+
+   $("#course").change(function (e) {
+       var course_id = $(this).val();
+
+       for (var i =0; i < subject.length; i++){
+           if (course_id == subject[i].course_id){
+
+               var sub = `<div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="">Subject</label>
+                                <select name="subject[]" id="" required class="form-control">
+                                    <option value="" selected>Select</option>
+                                    <option value="`+subject[i].id+`">`+subject[i].name+`</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="">Grade e.g (A1,B2)</label>
+                                <input type="text" name="grade[]" class="form-control" required placeholder="Grade" id="">
+                            </div>
+                        </div>`;
+
+               $(".add-more").append(sub);
+
+           }
+       }
+   });
+
 
     function  update_class(id,name,amount) {
         $(".show-modal").click();

@@ -51,9 +51,18 @@
 
            <Button
                android:layout_width="wrap_content"
-               android:text="Career Guidance"
+               android:text="List FPE Schools Guidance"
                android:layout_gravity="center"
                android:id="@+id/guidance"
+               android:layout_marginTop="@dimen/spacing_medium"
+               android:layout_marginBottom="@dimen/spacing_medium"
+               android:layout_height="wrap_content"/>
+
+           <Button
+               android:layout_width="wrap_content"
+               android:text="School Guidance"
+               android:layout_gravity="center"
+               android:id="@+id/check_guidance"
                android:layout_marginTop="@dimen/spacing_medium"
                android:layout_marginBottom="@dimen/spacing_medium"
                android:layout_height="wrap_content"/>

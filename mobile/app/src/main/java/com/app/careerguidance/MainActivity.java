@@ -28,7 +28,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button developer,guidance;
+    Button developer,guidance,check_guidance;
     ProgressDialog progressDialog;
 
     @Override
@@ -38,11 +38,19 @@ public class MainActivity extends AppCompatActivity {
 
         developer = findViewById(R.id.developer);
         guidance = findViewById(R.id.guidance);
+        check_guidance = findViewById(R.id.check_guidance);
 
         developer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Developers.class));
+            }
+        });
+
+        check_guidance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Check_guidiance.class));
             }
         });
 
