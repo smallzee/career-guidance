@@ -68,6 +68,8 @@
    $("#course").change(function (e) {
        var course_id = $(this).val();
 
+       $(".add-more").html('');
+
        for (var i =0; i < subject.length; i++){
            if (course_id == subject[i].course_id){
 
