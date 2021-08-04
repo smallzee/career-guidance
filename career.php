@@ -39,7 +39,7 @@ while ($sub = $subject_sql->fetch(PDO::FETCH_ASSOC)){
                     <div class="col-sm-12">
                         <div class="form-group mt-2">
                             <label for="" class="mb-2">Your Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" id="">
+                            <input type="text" required class="form-control" name="name" placeholder="Your Name" id="">
                         </div>
                     </div>
 
@@ -72,7 +72,7 @@ while ($sub = $subject_sql->fetch(PDO::FETCH_ASSOC)){
 
                <div class="col-12">
                    <div class="form-group mt-3">
-                       <input type="submit" style="width: 100%" class="btn btn-lg btn-primary btn-block" value="Submit" name="" id="">
+                       <input type="submit" style="width: 100%; background: #01579B; border: #01579B solid thin;" class="btn btn-lg btn-primary btn-block" value="Submit" name="" id="">
                    </div>
                </div>
             </form>

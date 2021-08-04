@@ -13,6 +13,7 @@ if (isset($_POST['add'])){
     $department = $_POST['department'];
     $course = $_POST['course'];
     $description = $_POST['description'];
+    $grade = $_POST['grade'];
 
     $subject = $_POST['subject'];
 
@@ -134,6 +135,8 @@ require_once 'libs/head.php';
 
                     <a href="#" class="btn btn-primary mb-20" data-target="#myModal" data-toggle="modal">Add New Guidance</a>
 
+                    <?php flash(); ?>
+
                     <div class="table-responsive">
                         <table class="table table-bordered" id="example1">
                             <thead>
@@ -143,6 +146,7 @@ require_once 'libs/head.php';
                                 <th>Department</th>
                                 <th>Description</th>
                                 <th>Subject &amp; Grade</th>
+                                <th>Created At</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -152,8 +156,59 @@ require_once 'libs/head.php';
                                 <th>Department</th>
                                 <th>Description</th>
                                 <th>Subject &amp; Grade</th>
+                                <th>Created At</th>
                             </tr>
                             </tfoot>
+                            <tbody>
+                            <?php
+                              $sql = $db->query("SELECT g.*, d.name as department, c.name course FROM ".DB_PREFIX."guidance g
+                                INNER JOIN ".DB_PREFIX."departments d
+                                    ON g.department_id = d.id
+                                    
+                                INNER JOIN ".DB_PREFIX."course c
+                                    ON g.course_id = c.id
+                               ORDER BY g.id DESC");
+                              while ($rs = $sql->fetch(PDO::FETCH_ASSOC)){
+
+                                  $guidance_id = $rs['id'];
+
+                                  ?>
+                                  <tr>
+                                      <td><?= $sn++ ?></td>
+                                      <td><?= ucwords($rs['course']) ?></td>
+                                      <td><?= $rs['department'] ?></td>
+                                      <td><?= $rs['description'] ?></td>
+                                      <td>
+                                          <table border="1">
+                                             <thead>
+                                             <tr>
+                                                 <th style="padding: 10px; width: 100%">Subject</th>
+                                                 <th style="padding: 10px; width: 100%">Grade</th>
+                                             </tr>
+                                             </thead>
+                                              <tbody>
+
+                                                <?php
+                                                    $sql2 = $db->query("SELECT g_g.*, s.name as subject FROM ".DB_PREFIX."guidance_grade g_g INNER JOIN ".DB_PREFIX."subject s ON g_g.subject_id = s.id WHERE g_g.guidance_id='$guidance_id'");
+                                                    while ($rs2 = $sql2->fetch(PDO::FETCH_ASSOC)){
+                                                        ?>
+                                                        <tr>
+                                                            <td style="padding: 10px; width: 100%"><?= ucwords($rs2['subject']) ?></td>
+                                                            <td style="padding: 10px; width: 100%"><?= $rs2['grade'] ?></td>
+                                                        </tr>
+                                                    <?php
+                                                    }
+                                                ?>
+
+                                              </tbody>
+                                          </table>
+                                      </td>
+                                      <td><?= $rs['created_at'] ?></td>
+                                  </tr>
+                                <?php
+                              }
+                            ?>
+                            </tbody>
                         </table>
                     </div>
 

@@ -60,7 +60,7 @@
 
            <Button
                android:layout_width="wrap_content"
-               android:text="School Guidance"
+               android:text="Career Guidance"
                android:layout_gravity="center"
                android:id="@+id/check_guidance"
                android:layout_marginTop="@dimen/spacing_medium"
