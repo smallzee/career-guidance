@@ -9,6 +9,16 @@
 $page_title = "Career Guidance";
 require_once 'config/core.php';
 
+if (isset($_GET['delete'])){
+    $id = $_GET['delete'];
+
+    $db->query("DELETE FROM ".DB_PREFIX."guidance WHERE id='$id'");
+    $db->query("DELETE FROM ".DB_PREFIX."guidance_grade WHERE guidance_id='$id'");
+
+    set_flash("Career guidance has been deleted successfully","info");
+    redirect(base_url('guidance.php'));
+}
+
 if (isset($_POST['add'])){
     $department = $_POST['department'];
     $course = $_POST['course'];
@@ -206,7 +216,12 @@ require_once 'libs/head.php';
                                           </table>
                                       </td>
                                       <td><?= $rs['created_at'] ?></td>
-                                      <td><a href="edit.php?id=<?= $rs['id']?>" class="btn btn-primary btn-sm">Edit</a></td>
+                                      <td>
+                                          <div class="btn-group">
+                                              <a href="edit.php?id=<?= $rs['id']?>" class="btn btn-primary btn-sm">Edit</a>
+                                              <a href="?delete=<?= $rs['id']?>" onclick="return confirm('Are you sure, you want to delete')" class="btn btn-danger btn-sm">Delete</a>
+                                          </div>
+                                      </td>
                                   </tr>
                                 <?php
                               }

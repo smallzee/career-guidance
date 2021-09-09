@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc75a911-4860-436a-b300-e0d080e16882" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/department.php" beforeDir="false" afterPath="$PROJECT_DIR$/department.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/guidance.php" beforeDir="false" afterPath="$PROJECT_DIR$/guidance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/app/src/main/java/com/app/careerguidance/Developers.java" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/src/main/java/com/app/careerguidance/Developers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mobile/app/src/main/res/layout/lists.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/app/src/main/res/layout/lists.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,39 +17,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/func.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
+            <state relative-caret-position="585">
               <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/guidance.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" selection-start-line="11" selection-end-line="49" selection-end-column="1" />
+            <state relative-caret-position="195">
+              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
               <folding>
                 <element signature="e#158#1333#0#PHP" />
-                <element signature="n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/edit.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/department.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
+            <state relative-caret-position="60">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -90,9 +76,9 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/career.php" />
         <option value="$PROJECT_DIR$/careers.php" />
+        <option value="$PROJECT_DIR$/edit.php" />
         <option value="$PROJECT_DIR$/department.php" />
         <option value="$PROJECT_DIR$/guidance.php" />
-        <option value="$PROJECT_DIR$/edit.php" />
       </list>
     </option>
   </component>
@@ -109,7 +95,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,6 +106,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,18 +153,19 @@
       <workItem from="1629275574013" duration="61000" />
       <workItem from="1629275701528" duration="526000" />
       <workItem from="1630483224548" duration="1849000" />
-      <workItem from="1631152885015" duration="1647000" />
+      <workItem from="1631152885015" duration="1964000" />
+      <workItem from="1631164482127" duration="281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52273000" />
+    <option name="totallyTimeSpent" value="52871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3861066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39256865" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,42 +270,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/func.php">
+    <entry file="file://$PROJECT_DIR$/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="222">
+          <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
+        <state relative-caret-position="585">
           <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/department.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="60">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/guidance.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" selection-start-line="11" selection-end-line="49" selection-end-column="1" />
+        <state relative-caret-position="195">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="e#158#1333#0#PHP" />
-            <element signature="n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="140" column="67" selection-start-line="140" selection-start-column="67" selection-end-line="140" selection-end-column="67" />
         </state>
       </provider>
     </entry>

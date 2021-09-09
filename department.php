@@ -8,24 +8,6 @@
 
 $page_title = "All Schools &amp; Departments";
 require_once 'config/core.php';
-$department_id = $_GET['id'];
-if (!isset($department_id) && empty($department_id)){
-    redirect(base_url('dashboard.php'));
-    return;
-}
-
-$sql = $db->query("SELECT g.*, d.name as department, c.name course FROM ".DB_PREFIX."guidance g
-                                INNER JOIN ".DB_PREFIX."departments d
-                                    ON g.department_id = d.id
-                                    
-                                INNER JOIN ".DB_PREFIX."course c
-                                    ON g.course_id = c.id
-                               WHERE g.department_id='$department_id'");
-
-if ($sql->rowCount() >= 1){
-    redirect(base_url('dashboard.php'));
-    return;
-}
 require_once 'libs/head.php';
 ?>
 
