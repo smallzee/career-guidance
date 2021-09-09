@@ -102,6 +102,18 @@
                android:layout_height="wrap_content"
                android:gravity="center_horizontal" />
 
+           <TextView
+               android:layout_width="match_parent"
+               style="@style/TextAppearance.AppCompat.Body2"
+               android:text="08034014197"
+               android:textSize="@dimen/spacing_large"
+               android:fontFamily="sans-serif-condensed"
+               android:layout_marginTop="@dimen/spacing_medium"
+               android:textAlignment="center"
+               android:textColor="@color/black"
+               android:layout_height="wrap_content"
+               android:gravity="center_horizontal" />
+
 
            <Button
                android:layout_width="wrap_content"

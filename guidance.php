@@ -147,6 +147,7 @@ require_once 'libs/head.php';
                                 <th>Description</th>
                                 <th>Subject &amp; Grade</th>
                                 <th>Created At</th>
+                                <th>Actions</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -157,6 +158,7 @@ require_once 'libs/head.php';
                                 <th>Description</th>
                                 <th>Subject &amp; Grade</th>
                                 <th>Created At</th>
+                                <th>Actions</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -204,6 +206,7 @@ require_once 'libs/head.php';
                                           </table>
                                       </td>
                                       <td><?= $rs['created_at'] ?></td>
+                                      <td><a href="edit.php?id=<?= $rs['id']?>" class="btn btn-primary btn-sm">Edit</a></td>
                                   </tr>
                                 <?php
                               }

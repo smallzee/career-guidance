@@ -32,11 +32,11 @@ public class Developers extends AppCompatActivity {
         recyclerView.setAdapter(recyclerViewAdapters);
 
         String JSON_FILE = "{'error' : '1', " +
-                "'0' : {'matric' : 'cs20180100560', 'name' : 'Aremu Comfort Oluwayemisi', 'level' : 'ND 2 FT'}, " +
-                "'1' : {'matric' : 'cs20180101813', name : 'Suleiman Ajibola Mahmud', 'level' : 'ND 2 FT'}, " +
-                "'2' : {'matric' : 'cs20180105016', name : 'Yekini Yusuf Adio', 'level' : 'ND 2 FT'}}";
+                "'0' : {'matric' : 'Aremu Comfort Oluwayemisi', 'name' : 'CS20180100560', 'level' : 'ND 2 FT', 'phone' : '07068902635'}, " +
+                "'1' : {'matric' : 'Suleiman Ajibola Mahmud', name : 'CS20180101813', 'level' : 'ND 2 FT','phone' : '08086913322'}, " +
+                "'2' : {'matric' : 'Yekini Yusuf Adio', name : 'CS20180105016', 'level' : 'ND 2 FT', 'phone' : '08081717553'}}";
 
-        String matric,name,level;
+        String matric,name,level,phone;
 
         try {
 
@@ -47,8 +47,9 @@ public class Developers extends AppCompatActivity {
                 matric = object.getJSONObject(Integer.toString(ii)).getString("matric").toUpperCase();
                 name = object.getJSONObject(Integer.toString(ii)).getString("name");
                 level = object.getJSONObject(Integer.toString(ii)).getString("level");
+                phone = object.getJSONObject(Integer.toString(ii)).getString("phone");
 
-                mData.add(new Lists(matric,name +" \n \n"+level,"",Core.IMG_URL+matric+".jpg","0","false"));
+                mData.add(new Lists(matric,name +" \n \n"+level,phone,Core.IMG_URL+name+".jpg","0","false"));
             }
 
         }catch (JSONException e){
